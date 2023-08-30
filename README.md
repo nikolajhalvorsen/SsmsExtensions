@@ -1,5 +1,4 @@
 # SsmsExtensions
-
 Extensions to Microsoft SQL Server Management Studio
 
 Extension supports SSMS 18 and 19.
