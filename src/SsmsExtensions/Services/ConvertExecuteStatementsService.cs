@@ -9,9 +9,10 @@ namespace SsmsExtensions.Services;
 
 internal static class ConvertExecuteStatementsService
 {
-    public static (IList<ParseError> Errors, bool IsModified, string OutputText) Execute(string text)
+    public static (IList<ParseError> Errors, bool IsModified, string Text) Execute(string text)
     {
         using var reader = new StringReader(text);
+
         var parser = new TSql160Parser(true, SqlEngineType.All);
         var script = (TSqlScript)parser.Parse(reader, out var errors);
 

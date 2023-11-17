@@ -48,7 +48,7 @@ go";
         var (errors, isModified, outputText) = ConvertExecuteStatementsService.Execute(text);
 
         errors.Count.ShouldBe(0);
-        isModified.ShouldBeTrue();
+        isModified.ShouldBe(true);
         outputText.ShouldBe(@"dummy
 go
 
@@ -106,7 +106,7 @@ go");
         var (errors, isModified, outputText) = ConvertExecuteStatementsService.Execute(text);
 
         errors.Count.ShouldBe(0);
-        isModified.ShouldBeTrue();
+        isModified.ShouldBe(true);
         outputText.ShouldBe("declare @Id int = 1\r\ndeclare @Name nvarchar(max) = 'Dum''my'\r\nselect 1\r\n");
     }
 
@@ -118,7 +118,7 @@ go");
         var (errors, isModified, outputText) = ConvertExecuteStatementsService.Execute(text);
 
         errors.Count.ShouldBe(0);
-        isModified.ShouldBeTrue();
+        isModified.ShouldBe(true);
         outputText.ShouldBe("select 1, 'Dum''my'\r\n");
     }
 
@@ -130,7 +130,7 @@ go");
         var (errors, isModified, outputText) = ConvertExecuteStatementsService.Execute(text);
 
         errors.Count.ShouldBe(0);
-        isModified.ShouldBeTrue();
+        isModified.ShouldBe(true);
         outputText.ShouldBe("declare @Id int = 1\r\ndeclare @Name nvarchar(max) = 'Dum''my'\r\nselect 1\r\n");
     }
 
@@ -143,7 +143,7 @@ go");
         var (errors, isModified, outputText) = ConvertExecuteStatementsService.Execute(text);
 
         errors.Count.ShouldBe(0);
-        isModified.ShouldBeTrue();
+        isModified.ShouldBe(true);
         outputText.ShouldBe(expected);
     }
 }
