@@ -59,8 +59,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <LangVersion>latest</LangVersion>
-    <CopyVsixExtensionFiles>True</CopyVsixExtensionFiles>
-    <CopyVsixExtensionLocation>XXX</CopyVsixExtensionLocation>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Commands\FormatCommand.cs" />
@@ -74,7 +72,7 @@
     <Compile Include="UI\NoActiveDocumentException.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Install.cmd" />
+    <None Include="Installer\Installer.iss" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
@@ -104,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images.png" />
+    <Content Include="Installer\InfoBefore.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -112,7 +111,8 @@
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
-  <Target Name="AfterBuild">
-  </Target>
   -->
+  <Target Name="AfterBuild" Condition="  '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Exec Command="&quot;$(MSBuildProgramFiles32)\Inno Setup 6\ISCC.exe&quot; &quot;$(ProjectDir)\Installer\Installer.iss&quot;" WorkingDirectory="$(ProjectDir)\Installer" />
+  </Target>
 </Project>

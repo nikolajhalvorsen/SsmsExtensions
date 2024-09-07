@@ -9,7 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SsmsExtensions", "SsmsExten
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{783F9ECC-DD8C-44F0-A529-8ADC07FDEEFF}"
 	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
 		..\README.md = ..\README.md
+		Release\SsmsExtensions.exe = Release\SsmsExtensions.exe
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{7C173E5A-3CD6-45BB-BDB7-6E5C783792DA}"
+	ProjectSection(SolutionItems) = preProject
+		..\release\SsmsExtensions.exe = ..\release\SsmsExtensions.exe
 	EndProjectSection
 EndProject
 Global

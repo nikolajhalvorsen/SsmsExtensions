@@ -1,0 +1,7 @@
+﻿Supports SSMS version 18 and 19 only
+
+Must be installed into the SSMS installation folder.
+
+Select the correct SSMS installaltion folder in the next step.
+
+For additional details go to https://github.com/nikolajhalvorsen/SsmsExtensions.

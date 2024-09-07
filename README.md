@@ -44,3 +44,5 @@ Change _VSIX => Copy VSIX content to the following location_ to install into ano
 ## Additional Information
 
 For information on how to create extensions for SMSS go [here](https://www.codeproject.com/Articles/1377559/How-to-Create-SQL-Server-Management-Studio-18-SSMS).
+
+The project uses [Inno Setup](https://jrsoftware.org/isinfo.php) for creating the installer.
