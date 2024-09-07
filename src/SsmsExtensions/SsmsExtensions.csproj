@@ -59,6 +59,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <LangVersion>latest</LangVersion>
+    <CopyVsixExtensionFiles>True</CopyVsixExtensionFiles>
+    <CopyVsixExtensionLocation>XXX</CopyVsixExtensionLocation>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Commands\FormatCommand.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="UI\NoActiveDocumentException.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Install.cmd" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
