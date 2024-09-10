@@ -35,6 +35,8 @@ public sealed class SsmsExtensionsPackage : AsyncPackage
     /// </summary>
     public const string PackageGuidString = "02bccddd-cf4f-4db9-8dd4-b3a485b9918d";
 
+    private Mutex _installerMutex = new(true, PackageGuidString, out _);
+
     #region Package Members
 
     /// <summary>
